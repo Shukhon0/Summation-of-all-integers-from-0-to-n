@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta color=blue>
+    <title>Document</title>
+    <link rel= "stylesheet" href="summationtilln.css">
+    <script>
+        var number=(10000);
+    </script>
+</head>
+<body>
+<h1>Summation of all integers from 0 to </h1>
+<h1 id = 'nth'>number</h1>
+<h1> = </h1>
+<h1 id= 'sum'>sum goes here</h1>
+<script>
+ // comment numeros!
+    function sumUpTofrompos1(number) {
+        return ((1 + number) * (number/2));
+    }
+    function sumUpTofromneg1(number) {
+        return (sumUpTofrompos1(number*(-1)) * (-1));
+    }
+    function summation(number) {
+    if (number > 0) {
+     return (sumUpTofrompos1(number))
+    } else {
+     return (sumUpTofromneg1(number));
+    }
+    }
+    document.getElementById('nth').textContent=(number);
+    document.getElementById('sum').textContent=(summation(number));
+    </script>
+</body>
+</html>
